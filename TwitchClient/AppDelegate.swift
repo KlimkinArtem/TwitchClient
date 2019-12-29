@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  TwitchClient
-//
-//  Created by Артем Климкин on 27/12/2019.
-//  Copyright © 2019 Artem Klimkin. All rights reserved.
-//
-
 import Cocoa
 
 @NSApplicationMain
@@ -24,3 +16,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 }
 
+
+func delayWithSeconds(_ seconds: Double, completion: @escaping () -> ()) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+        completion()
+    }
+}

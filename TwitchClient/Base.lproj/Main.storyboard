@@ -409,7 +409,7 @@
         <!--Menu View Controller-->
         <scene sceneID="qE3-SL-dWn">
             <objects>
-                <viewController id="7qx-fY-PmW" customClass="MenuViewController" customModule="WatchTwitch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7qx-fY-PmW" customClass="MenuViewController" customModule="TwitchClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="TyC-fM-FR9">
                         <rect key="frame" x="0.0" y="0.0" width="130" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -497,7 +497,7 @@
         <!--Second Menu View Controller-->
         <scene sceneID="W0T-Ge-tdA">
             <objects>
-                <viewController id="hOs-oG-osY" customClass="SecondMenuViewController" customModule="WatchTwitch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hOs-oG-osY" customClass="SecondMenuViewController" customModule="TwitchClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Rqp-td-CKQ">
                         <rect key="frame" x="0.0" y="0.0" width="230" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -580,7 +580,7 @@
                 </viewController>
                 <customObject id="swc-rE-BhU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="651" y="920"/>
+            <point key="canvasLocation" x="651" y="967"/>
         </scene>
     </scenes>
 </document>

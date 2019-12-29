@@ -1,17 +1,9 @@
-//
-//  GamesMenuViewController.swift
-//  WatchTwitch
-//
-//  Created by Артем Климкин on 26/12/2019.
-//  Copyright © 2019 Artem Klimkin. All rights reserved.
-//
-
 import Cocoa
-
 
 class SecondMenuViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
 
-    let getGames = GetCurrentGames()
+
+    static let controller = SecondMenuViewController()
     
     let section = ["🎮 Games", "🎖 Games", "👨‍❤️‍👨 Games"]
     let section2 = ["🎮 FFGames", "🎖 FFGames", "👨‍❤️‍👨 FFGames","🎮 FFGames", "🎖 FFGames", "👨‍❤️‍👨 FFGames","🎮 FFGames", "🎖 FFGames", "👨‍❤️‍👨 FFGames","🎮 FFGames", "🎖 FFGames"]
@@ -21,7 +13,15 @@ class SecondMenuViewController: NSViewController, NSTableViewDelegate, NSTableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         let _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-            self.tableView.reloadData()
+            if prepareVariable == 0{
+                return
+            }else if prepareVariable == 1{
+                self.tableView.reloadData()
+                prepareVariable = 0
+            }else if prepareVariable == 2{
+                self.tableView.reloadData()
+                prepareVariable = 0
+            }
         }
     }
     
@@ -43,7 +43,5 @@ class SecondMenuViewController: NSViewController, NSTableViewDelegate, NSTableVi
         }
         
     }
-    
-    
-    
+            
 }

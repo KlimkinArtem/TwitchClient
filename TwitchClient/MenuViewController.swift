@@ -1,14 +1,7 @@
-//
-//  MenuViewController.swift
-//  WatchTwitch
-//
-//  Created by Артем Климкин on 26/12/2019.
-//  Copyright © 2019 Artem Klimkin. All rights reserved.
-//
-
 import Cocoa
 
 var changeMenuSection = 0
+var prepareVariable = 0
 
 class MenuViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
 
@@ -73,11 +66,10 @@ class MenuViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
     func tableViewSelectionDidChange(_ notification: Notification) {
         if tableView.selectedRow == 0{
             changeMenuSection = 1
-            print(changeMenuSection)
+            prepareVariable = 1
         }else{
             changeMenuSection = 2
-            print(changeMenuSection)
+            prepareVariable = 2
         }
     }
-    
 }
