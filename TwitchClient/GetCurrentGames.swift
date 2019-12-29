@@ -13,10 +13,11 @@ struct Games: Decodable{
 
 class GetCurrentGames{
     
-    static let shared = GetCurrentGames()
-    var games = [String]()
     
-    func jsonParse(){
+    static let shared = GetCurrentGames()
+    var topGamesArray = [String]()
+    
+    func getTopGames(){
         
         guard let url = URL(string: GET_TOP_GAMES) else {return}
         
@@ -29,13 +30,17 @@ class GetCurrentGames{
             
             do{
                 let value = try JSONDecoder().decode(DataUrl.self, from: data)
-                for game in 0...10{
+                print(value.data.count)
+                for game in 0 ..< value.data.count{
                     print(value.data[game].name!)
-                    self.games.append(value.data[game].name!)
+                    self.topGamesArray.append(value.data[game].name!)
                 }
             }catch let err{
                 print(err)
             }
         }.resume()
     }
+    
+   
+    
 }

@@ -16,8 +16,7 @@ class MenuViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        GetCurrentGames.shared.jsonParse()
+        GetCurrentGames.shared.getTopGames()
 //
 //        guard let url = URL(string: "https://api.twitch.tv/helix/games/top") else {
 //            return
@@ -64,6 +63,9 @@ class MenuViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
     }
     
     func tableViewSelectionDidChange(_ notification: Notification) {
+        
+        
+        
         if tableView.selectedRow == 0{
             changeMenuSection = 1
             prepareVariable = 1

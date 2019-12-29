@@ -3,8 +3,6 @@ import Cocoa
 class SecondMenuViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
 
 
-    static let controller = SecondMenuViewController()
-    
     let section = ["🎮 Games", "🎖 Games", "👨‍❤️‍👨 Games"]
     let section2 = ["🎮 FFGames", "🎖 FFGames", "👨‍❤️‍👨 FFGames","🎮 FFGames", "🎖 FFGames", "👨‍❤️‍👨 FFGames","🎮 FFGames", "🎖 FFGames", "👨‍❤️‍👨 FFGames","🎮 FFGames", "🎖 FFGames"]
     
@@ -12,7 +10,7 @@ class SecondMenuViewController: NSViewController, NSTableViewDelegate, NSTableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+        let _ = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
             if prepareVariable == 0{
                 return
             }else if prepareVariable == 1{
@@ -26,7 +24,7 @@ class SecondMenuViewController: NSViewController, NSTableViewDelegate, NSTableVi
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return GetCurrentGames.shared.games.count
+        return GetCurrentGames.shared.topGamesArray.count
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
@@ -35,7 +33,7 @@ class SecondMenuViewController: NSViewController, NSTableViewDelegate, NSTableVi
         if changeMenuSection == 0 {
             return nil
         }else if changeMenuSection == 1{
-            vw.textField?.stringValue = GetCurrentGames.shared.games[row]
+            vw.textField?.stringValue = GetCurrentGames.shared.topGamesArray[row]
             return vw
         }else{
             vw.textField?.stringValue = section2[row]
