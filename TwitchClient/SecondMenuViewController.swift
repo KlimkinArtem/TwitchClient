@@ -1,5 +1,6 @@
 import Cocoa
 
+
 class SecondMenuViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
 
 
@@ -24,21 +25,30 @@ class SecondMenuViewController: NSViewController, NSTableViewDelegate, NSTableVi
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return GetCurrentGames.shared.topGamesArray.count
+        return GetCurrentGames.shared.topGamesNameArray.count
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         guard let vw = tableView.makeView(withIdentifier: tableColumn!.identifier, owner: self) as? NSTableCellView else {return nil}
+                
         
         if changeMenuSection == 0 {
             return nil
         }else if changeMenuSection == 1{
-            vw.textField?.stringValue = GetCurrentGames.shared.topGamesArray[row]
+            vw.textField?.stringValue = GetCurrentGames.shared.topGamesNameArray[row]
             return vw
         }else{
             vw.textField?.stringValue = section2[row]
             return vw
         }
+    }
+    
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        topGameId = GetCurrentGames.shared.topGamesIdArray[tableView.selectedRow]
+        topGameName = GetCurrentGames.shared.topGamesNameArray[tableView.selectedRow]
+        topGameImageUrl = GetCurrentGames.shared.topGamesImageUrlArray[tableView.selectedRow]
+        
+        
         
     }
             

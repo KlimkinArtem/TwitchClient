@@ -388,6 +388,7 @@
                     <splitViewItems>
                         <splitViewItem id="jd8-ic-gPF"/>
                         <splitViewItem id="zdx-Uc-4N2"/>
+                        <splitViewItem id="ryj-R8-1PY"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="1yI-IS-zba">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
@@ -400,6 +401,7 @@
                         <outlet property="splitView" destination="1yI-IS-zba" id="m0n-xL-kIm"/>
                         <segue destination="7qx-fY-PmW" kind="relationship" relationship="splitItems" id="ms6-JZ-Y97"/>
                         <segue destination="hOs-oG-osY" kind="relationship" relationship="splitItems" id="rLT-KT-6ab"/>
+                        <segue destination="kCg-FX-hSx" kind="relationship" relationship="splitItems" id="2VA-Vl-fuv"/>
                     </connections>
                 </splitViewController>
                 <customObject id="l15-VW-wvq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -581,6 +583,50 @@
                 <customObject id="swc-rE-BhU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="651" y="967"/>
+        </scene>
+        <!--Show Broadcast View Controller-->
+        <scene sceneID="nYc-Zk-rCY">
+            <objects>
+                <viewController id="kCg-FX-hSx" customClass="ShowBroadcastViewController" customModule="TwitchClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="9OO-68-iLK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0js-eI-NMS">
+                                <rect key="frame" x="338" y="501" width="81" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Kt0-iy-uMo">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="showTapped:" target="kCg-FX-hSx" id="lPi-fN-PLA"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kwu-9O-DWY">
+                                <rect key="frame" x="-2" y="179" width="589" height="16"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="Eca-MZ-gkR">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rvA-rg-yal">
+                                <rect key="frame" x="27" y="280" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="ADK-cP-uIf"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="gameNameLabel" destination="kwu-9O-DWY" id="CyV-YM-wvF"/>
+                        <outlet property="imageView" destination="rvA-rg-yal" id="f6u-BM-baV"/>
+                    </connections>
+                </viewController>
+                <customObject id="ZaA-e6-zxh" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-140" y="1022"/>
         </scene>
     </scenes>
 </document>

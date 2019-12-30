@@ -15,7 +15,10 @@ class GetCurrentGames{
     
     
     static let shared = GetCurrentGames()
-    var topGamesArray = [String]()
+    
+    var topGamesNameArray = [String]()
+    var topGamesIdArray = [String]()
+    var topGamesImageUrlArray = [String]()
     
     func getTopGames(){
         
@@ -32,8 +35,9 @@ class GetCurrentGames{
                 let value = try JSONDecoder().decode(DataUrl.self, from: data)
                 print(value.data.count)
                 for game in 0 ..< value.data.count{
-                    print(value.data[game].name!)
-                    self.topGamesArray.append(value.data[game].name!)
+                    self.topGamesIdArray.append(value.data[game].id!)
+                    self.topGamesNameArray.append(value.data[game].name!)
+                    self.topGamesImageUrlArray.append(value.data[game].box_art_url!)
                 }
             }catch let err{
                 print(err)
