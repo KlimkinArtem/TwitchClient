@@ -4,9 +4,7 @@ enum correctUrlChoice{
     case gameImageUrl, streamerName, playVideoUrl
 }
 
-var changeMenuSection = 0
-var prepareVariable = 0
-var observeTheShowVariables = false
+var showAllStreamers = false
 
 
 

@@ -13,7 +13,7 @@ class MenuViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        GetCurrentGames.shared.getGames()
+        
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {

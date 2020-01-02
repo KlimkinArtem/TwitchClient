@@ -11,12 +11,11 @@
 		D11E882F23B5ED3A00406E6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E882E23B5ED3A00406E6B /* AppDelegate.swift */; };
 		D11E883323B5ED3B00406E6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D11E883223B5ED3B00406E6B /* Assets.xcassets */; };
 		D11E883623B5ED3B00406E6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D11E883423B5ED3B00406E6B /* Main.storyboard */; };
-		D11E884323B5ED9D00406E6B /* SecondMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E884223B5ED9D00406E6B /* SecondMenuViewController.swift */; };
+		D11E884323B5ED9D00406E6B /* GameMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E884223B5ED9D00406E6B /* GameMenuVC.swift */; };
 		D11E884523B5EDA900406E6B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E884423B5EDA900406E6B /* MenuViewController.swift */; };
-		D11E884723B5EDB700406E6B /* GetCurrentGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E884623B5EDB700406E6B /* GetCurrentGames.swift */; };
-		D1A644FA23B9573500F3E9C0 /* ShowBroadcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A644F923B9573500F3E9C0 /* ShowBroadcastViewController.swift */; };
+		D11E884723B5EDB700406E6B /* DataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E884623B5EDB700406E6B /* DataStruct.swift */; };
+		D1A644FA23B9573500F3E9C0 /* ShowAllStreamersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A644F923B9573500F3E9C0 /* ShowAllStreamersVC.swift */; };
 		D1AB11D323BD4F6D008767C9 /* PrintJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AB11D223BD4F6D008767C9 /* PrintJson.swift */; };
-		D1AB11D923BD6872008767C9 /* GetCurrentStreams.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AB11D823BD6872008767C9 /* GetCurrentStreams.swift */; };
 		D1DC57F923BDB40F00ED452E /* ShowVideosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC57F823BDB40F00ED452E /* ShowVideosVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,12 +27,11 @@
 		D11E883523B5ED3B00406E6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D11E883723B5ED3B00406E6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D11E883823B5ED3B00406E6B /* TwitchClient.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TwitchClient.entitlements; sourceTree = "<group>"; };
-		D11E884223B5ED9D00406E6B /* SecondMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondMenuViewController.swift; sourceTree = "<group>"; };
+		D11E884223B5ED9D00406E6B /* GameMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMenuVC.swift; sourceTree = "<group>"; };
 		D11E884423B5EDA900406E6B /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		D11E884623B5EDB700406E6B /* GetCurrentGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrentGames.swift; sourceTree = "<group>"; };
-		D1A644F923B9573500F3E9C0 /* ShowBroadcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBroadcastViewController.swift; sourceTree = "<group>"; };
+		D11E884623B5EDB700406E6B /* DataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStruct.swift; sourceTree = "<group>"; };
+		D1A644F923B9573500F3E9C0 /* ShowAllStreamersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllStreamersVC.swift; sourceTree = "<group>"; };
 		D1AB11D223BD4F6D008767C9 /* PrintJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintJson.swift; sourceTree = "<group>"; };
-		D1AB11D823BD6872008767C9 /* GetCurrentStreams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrentStreams.swift; sourceTree = "<group>"; };
 		D1DC57F823BDB40F00ED452E /* ShowVideosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowVideosVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,8 +67,8 @@
 			children = (
 				D11E882E23B5ED3A00406E6B /* AppDelegate.swift */,
 				D11E884423B5EDA900406E6B /* MenuViewController.swift */,
-				D11E884223B5ED9D00406E6B /* SecondMenuViewController.swift */,
-				D1A644F923B9573500F3E9C0 /* ShowBroadcastViewController.swift */,
+				D11E884223B5ED9D00406E6B /* GameMenuVC.swift */,
+				D1A644F923B9573500F3E9C0 /* ShowAllStreamersVC.swift */,
 				D1DC57F823BDB40F00ED452E /* ShowVideosVC.swift */,
 				D1E04CFA23BACACA00789F4A /* New Group */,
 				D11E883223B5ED3B00406E6B /* Assets.xcassets */,
@@ -84,8 +82,7 @@
 		D1E04CFA23BACACA00789F4A /* New Group */ = {
 			isa = PBXGroup;
 			children = (
-				D11E884623B5EDB700406E6B /* GetCurrentGames.swift */,
-				D1AB11D823BD6872008767C9 /* GetCurrentStreams.swift */,
+				D11E884623B5EDB700406E6B /* DataStruct.swift */,
 				D1AB11D223BD4F6D008767C9 /* PrintJson.swift */,
 				D10F61B023B60F0900CC3675 /* GlobalVariable.swift */,
 			);
@@ -163,14 +160,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1AB11D323BD4F6D008767C9 /* PrintJson.swift in Sources */,
-				D11E884723B5EDB700406E6B /* GetCurrentGames.swift in Sources */,
+				D11E884723B5EDB700406E6B /* DataStruct.swift in Sources */,
 				D11E882F23B5ED3A00406E6B /* AppDelegate.swift in Sources */,
 				D1DC57F923BDB40F00ED452E /* ShowVideosVC.swift in Sources */,
-				D11E884323B5ED9D00406E6B /* SecondMenuViewController.swift in Sources */,
-				D1AB11D923BD6872008767C9 /* GetCurrentStreams.swift in Sources */,
+				D11E884323B5ED9D00406E6B /* GameMenuVC.swift in Sources */,
 				D11E884523B5EDA900406E6B /* MenuViewController.swift in Sources */,
 				D10F61B123B60F0900CC3675 /* GlobalVariable.swift in Sources */,
-				D1A644FA23B9573500F3E9C0 /* ShowBroadcastViewController.swift in Sources */,
+				D1A644FA23B9573500F3E9C0 /* ShowAllStreamersVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
