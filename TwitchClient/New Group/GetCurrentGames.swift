@@ -1,7 +1,7 @@
 import Foundation
 
 
-struct DataUrl: Decodable{
+struct GamesData: Decodable{
     let data: [Games]
 }
 
@@ -16,11 +16,11 @@ class GetCurrentGames{
     
     static let shared = GetCurrentGames()
     
-    var topGamesNameArray = [String]()
-    var topGamesIdArray = [String]()
-    var topGamesImageUrlArray = [String]()
+    var gamesNameArray = [String]()
+    var gamesIdArray = [String]()
+    var gamesImageUrlArray = [String]()
     
-    func getTopGames(){
+    func getGames(){
         
         guard let url = URL(string: GET_TOP_GAMES) else {return}
         
@@ -32,12 +32,13 @@ class GetCurrentGames{
             guard let data = data else {return}
             
             do{
-                let value = try JSONDecoder().decode(DataUrl.self, from: data)
+                let value = try JSONDecoder().decode(GamesData.self, from: data)
                 print(value.data.count)
                 for game in 0 ..< value.data.count{
-                    self.topGamesIdArray.append(value.data[game].id!)
-                    self.topGamesNameArray.append(value.data[game].name!)
-                    self.topGamesImageUrlArray.append(value.data[game].box_art_url!)
+                    self.gamesIdArray.append(value.data[game].id!)
+                    self.gamesNameArray.append(value.data[game].name!)
+                    self.gamesImageUrlArray.append(value.data[game].box_art_url!)
+                    
                 }
             }catch let err{
                 print(err)

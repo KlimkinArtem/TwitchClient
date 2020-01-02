@@ -3,8 +3,8 @@ import Cocoa
 
 class MenuViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
 
-    //1we71oc0so0wr4ouztap8jw6z6w3ey
-//curl -H 'Client-ID: 1we71oc0so0wr4ouztap8jw6z6w3ey' -X GET 'https://api.twitch.tv/helix/streams?game_id=33214'
+//1we71oc0so0wr4ouztap8jw6z6w3ey
+//curl -H 'Client-ID: 1we71oc0so0wr4ouztap8jw6z6w3ey' -X GET 'https://api.twitch.tv/helix/streams?game_id=509658'
     
     
     @IBOutlet var tableView: NSTableView!
@@ -13,26 +13,7 @@ class MenuViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        GetCurrentGames.shared.getTopGames()
-
-        guard let url = URL(string: "https://api.twitch.tv/helix/games") else {
-            return
-        }
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.addValue(CLIENT_ID, forHTTPHeaderField: "Client-ID")
-
-        URLSession.shared.dataTask(with: request) { (data, request, err) in
-
-            guard let data = data else {return}
-
-            
-
-            if let str = String(data: data, encoding: .utf8){
-                print(str)
-
-            }
-        }.resume()
+        GetCurrentGames.shared.getGames()
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {

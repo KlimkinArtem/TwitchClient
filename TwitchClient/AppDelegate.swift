@@ -15,10 +15,3 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
 }
-
-
-func delayWithSeconds(_ seconds: Double, completion: @escaping () -> ()) {
-    DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-        completion()
-    }
-}

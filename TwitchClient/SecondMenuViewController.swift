@@ -25,7 +25,7 @@ class SecondMenuViewController: NSViewController, NSTableViewDelegate, NSTableVi
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return GetCurrentGames.shared.topGamesNameArray.count
+        return GetCurrentGames.shared.gamesNameArray.count
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
@@ -35,7 +35,7 @@ class SecondMenuViewController: NSViewController, NSTableViewDelegate, NSTableVi
         if changeMenuSection == 0 {
             return nil
         }else if changeMenuSection == 1{
-            vw.textField?.stringValue = GetCurrentGames.shared.topGamesNameArray[row]
+            vw.textField?.stringValue = GetCurrentGames.shared.gamesNameArray[row]
             return vw
         }else{
             vw.textField?.stringValue = section2[row]
@@ -44,12 +44,12 @@ class SecondMenuViewController: NSViewController, NSTableViewDelegate, NSTableVi
     }
     
     func tableViewSelectionDidChange(_ notification: Notification) {
-        topGameId = GetCurrentGames.shared.topGamesIdArray[tableView.selectedRow]
-        topGameName = GetCurrentGames.shared.topGamesNameArray[tableView.selectedRow]
-        topGameImageUrl = GetCurrentGames.shared.topGamesImageUrlArray[tableView.selectedRow]
         
+        observeTheShowVariables = true
         
-        
+        gameId = GetCurrentGames.shared.gamesIdArray[tableView.selectedRow]
+        gameName = GetCurrentGames.shared.gamesNameArray[tableView.selectedRow]
+        gameImageUrl = GetCurrentGames.shared.gamesImageUrlArray[tableView.selectedRow]
     }
             
 }
